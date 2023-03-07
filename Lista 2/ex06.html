@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Exercício 06</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="estilo.css">
+    <script src="geral.js"></script>
+</head>
+
+<body>
+    <div >
+        <div>
+            <h1>Exercício 06</h1>
+        </div>
+
+        <div id="caixa">
+            <div>
+                Informe o primeiro número <input type="number" id="num1"/> 
+            </div>
+            <div>
+                Informe o segundo número <input type="number" id="num2"/>
+            </div>
+            <div>
+                Selecione a operação 
+                <select id="opcao">
+                    <option value="1">Potência</option>
+                    <option value="2">Raiz Quadrada</option>
+                    <option value="3">Raiz Cúbica</option>
+                </select>
+            </div>
+            <button onclick="calcularEx06()">Calcular</button>
+            <div>
+                <p id="mensagem"/>
+            </div>
+        </div>
+        
+    </div>
+    
+</body>
+</html>

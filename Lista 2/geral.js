@@ -1,4 +1,18 @@
-function nota(){
+function calcularEx01(){
+    let num1 = Number(document.getElementById("num1").value)
+    let num2 = Number(document.getElementById("num2").value)
+    let num3 = Number(document.getElementById("num3").value)
+    let num4 = Number(document.getElementById("num4").value)
+    let soma = parseFloat(num1) + parseFloat(num2) + parseFloat(num3) + parseFloat(num4)
+    let media  = soma / 4
+    if (media >= 7) {
+        mensagem.innerHTML = "Aprovado " + "<br/>A média é: " + media
+    } else {
+        mensagem.innerHTML = "Reprovado " + "<br/>A média é: " + media
+    }
+}
+
+function calcularEx02(){
     let num1 = Number(document.getElementById("num1").value)
     let num2 = Number(document.getElementById("num2").value)
     let media = (num1 + num2)/2 
@@ -15,6 +29,41 @@ function nota(){
     }
 
     document.getElementById("mensagem").innerHTML =  mensagem 
+}
+
+function calcularEx03(){
+   
+    let num1 = Number(document.getElementById("num1").value)
+    let num2 = Number(document.getElementById("num2").value)
+    
+    if (num1 > num2) {
+        mensagem.innerHTML = `O maior número é : ${num1}`
+    } else if (num2 > num1) {
+        mensagem.innerHTML =  `O maior número é : ${num2}`
+    } else if (num2 = num1){
+        mensagem.innerHTML =  `Os números são iguais`
+    } else {
+        mensagem.innerHTML =  "Algo deu errado. Tente novamente"
+    } 
+
+}
+
+function calcularEx04(){
+   
+    let num1 = Number(document.getElementById("num1").value)
+    let num2 = Number(document.getElementById("num2").value)
+    let num3 = Number(document.getElementById("num3").value)
+    
+    if ((num1<num3) && (num2<num3)) {
+        mensagem.innerHTML = "O número maior é: " + num3
+    } else if ((num1<num2) && (num3<num2)) {
+        mensagem.innerHTML = "O número maior é: " + num2
+    } else if ((num3<num1) && (num2<num1)) {
+        mensagem.innerHTML = "O número maior é: " + num1
+    } else {
+        mensagem.innerHTML = "Há números repetidos"
+    }
+
 }
 
 function calcularEx5(){
@@ -54,3 +103,35 @@ function calcularEx5(){
 
     document.getElementById("mensagem").innerHTML =  mensagem 
 }
+
+
+function calcularEx06(){
+    let num1 = Number(document.getElementById("num1").value)
+    let num2 = Number(document.getElementById("num2").value)
+    let opcao = Number(document.getElementById("opcao").value)
+    let mensagem 
+    
+    switch (opcao){
+        case 1:
+            let elevado = (num1 ** num2)
+            mensagem = `A potência é ${elevado}`
+            break
+        case 2:
+            let raiz1 = Math.sqrt(num1)
+            let raiz2 = Math.sqrt(num2)
+            mensagem = `A raiz quadrada do 1º número é: ${raiz1.toFixed(2)} 
+                        A raiz quadrada do 2º número é: ${raiz2.toFixed(2)}`
+            break
+        case 3:
+            let raizc1 = Math.cbrt(num1)
+            let raizc2 = Math.cbrt(num2)
+            mensagem = `A raiz cúbica do 1º número é: ${raizc1.toFixed(2)} 
+                        A raiz cúbica do 2º número é: ${raizc2.toFixed(2)}`
+            break
+        default:
+            mensagem = 'Tente novamente'
+    }
+
+    document.getElementById("mensagem").innerHTML =  mensagem 
+}
+
