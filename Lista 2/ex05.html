@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Exercício 05</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="estilo.css">
+    <script src="geral.js"></script>
+</head>
+
+<body>
+    <div >
+        <div>
+            <h1>Exercício 05</h1>
+        </div>
+
+        <div id="caixa">
+            <div>
+                Informe número 1 <input type="number" id="num1"/> 
+            </div>
+            <div>
+                Informe número 2 <input type="number" id="num2"/>
+            </div>
+
+            <div>
+                Selecione a operação 
+                <select id="opcao">
+                    <option value="1">Média entre os números digitados</option>
+                    <option value="2">Diferença do maior pelo menor</option>
+                    <option value="3">Produto entre os números digitados</option>
+                    <option value="4">Divisão do primeiro pelo segundo</option>
+                </select>
+            </div>
+
+            <button onclick="calcularEx5()">Calcular</button>
+        </div>
+        <div>
+            <p id="mensagem"/>
+        </div>
+        
+    </div>
+    
+</body>
+</html>
