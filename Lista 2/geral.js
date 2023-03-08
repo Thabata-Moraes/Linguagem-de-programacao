@@ -104,7 +104,6 @@ function calcularEx5(){
     document.getElementById("mensagem").innerHTML =  mensagem 
 }
 
-
 function calcularEx06(){
     let num1 = Number(document.getElementById("num1").value)
     let num2 = Number(document.getElementById("num2").value)
@@ -134,4 +133,68 @@ function calcularEx06(){
 
     document.getElementById("mensagem").innerHTML =  mensagem 
 }
+
+function calcularEx07(){
+    let num1 = Number(document.getElementById("num1").value)
+    if (num1 <500) {
+        let sal = parseFloat(num1) + parseFloat(num1 * 0.30)
+        mensagem.innerHTML = "O salário com reajuste é: " + sal
+    } else {
+        mensagem.innerHTML = "Não tem direito ao aumento"
+    }
+}
+
+function calcularEx08(){
+    let num1 = Number(document.getElementById("num1").value)
+    if (num1 <=300) {
+        let sal = parseFloat(num1) + parseFloat(num1 * 0.35)
+        mensagem.innerHTML = "O salário com reajuste é: " + sal
+    } else {
+        let sal = parseFloat(num1) + parseFloat(num1 * 0.15)
+        mensagem.innerHTML = "O salário com reajuste é: " + sal
+    }
+}
+
+function calcularEx09(){
+    let num1 = Number(document.getElementById("num1").value)
+    if (num1 <=200) {
+        let sal = (num1 * 0.10)
+        mensagem.innerHTML = "O saldo médio é: " + num1 + "<br/>O valor de crédito é: " + sal
+    } else if ((num1>200) && (num1<=300)) {
+        let sal = (num1 * 0.20)
+        mensagem.innerHTML = "O saldo médio é: " + num1 + "<br/>O valor de crédito é: " + sal
+    } else if ((num1>300) && (num1<=400)) {
+        let sal = (num1 * 0.25)
+        mensagem.innerHTML = "O saldo médio é: " + num1 + "<br/>O valor de crédito é: " + sal
+    } else if (num1>400) {
+        let sal = (num1 * 0.30)
+        mensagem.innerHTML = "O saldo médio é: " + num1 + "<br/>O valor de crédito é: " + sal
+    }
+}
+
+function calcularEx10(){
+    let num1 = Number(document.getElementById("num1").value)
+    if (num1 <=12000) {
+        let dis = 0.05
+        let custo= parseFloat(num1) + parseFloat(num1 * dis)
+        mensagem.innerHTML = "O valor do carro é:" + custo
+    } else if ((num1>12000) && (num1<=25000)) {
+        let dis = 0.10
+        let imp = 0.15
+        let dis1 = (num1 * dis)
+        let imp1 = (num1 * imp)
+        let custo =  parseFloat(dis1) + parseFloat(imp1) + parseFloat(num1)
+        mensagem.innerHTML = "O valor do carro é:" + custo
+    } else if (num1>25000) {
+        let dis = 0.15
+        let imp = 0.20
+        let dis1 = (num1 * dis)
+        let imp1 = (num1 * imp)
+        let custo =  parseFloat(dis1) + parseFloat(imp1) + parseFloat(num1)
+        mensagem.innerHTML = "O valor do carro é:" + custo
+    }
+    
+}
+
+
 
