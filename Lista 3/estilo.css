@@ -28,6 +28,16 @@ button {
     margin-left: 15px;
     margin-top: 15px;
     margin-bottom: 15px;
+    background-color: #faebd7;
+    border-radius: 10px;
+    border: 2px solid #ffa500;
+    
+}
+
+button:hover {
+    background-color: bisque;
+    border: 2px solid #faebd7;
+    border-radius: 10px;
 }
 
 input {
