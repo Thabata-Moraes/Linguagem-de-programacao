@@ -99,3 +99,109 @@ function calcularEx04(){
 
     
 }
+
+function calcularEx21(){
+    let opcao1 = 0
+    let opcao2 = 0
+    let opcao3 = 0
+    let opcao4 = 0
+    let opcao5 = 0
+    let opcao6 = 0 
+    let mensagem = ''
+    let total = 0 
+    let op;
+
+    do {
+        total += 1
+        op=Number(prompt(`Entre com a opção:
+        0 - Encerrar votação
+        1 - Votar candidato 1 
+        2 - Votar candidato 2 
+        3 - Votar candidato 3 
+        4 - Votar candidato 4 
+        5 - Votar nulo 
+        6 - Votar branco
+        `))
+
+        switch(op){
+            case 0:
+                break
+            case 1:
+                opcao1 += 1
+                break
+            case 2:
+                opcao2 += 1
+                break
+            case 3:
+                opcao3 += 1
+                break
+            case 4:
+                opcao4 += 1
+                break
+            case 5:
+                opcao5 += 1
+                break
+            case 6:
+                opcao6 += 1
+                break
+            default:
+                alert ('Opção indisponível')
+        }
+        console.log(op)
+    } while(op!=0);
+
+    mensagem = `
+        Resumo da votação: </br>
+        Candidato 1: ${opcao1} </br>
+        Candidato 2: ${opcao2} </br>
+        Candidato 3: ${opcao3} </br>
+        Candidato 4: ${opcao4} </br>
+        Votos nulos: ${opcao5} </br>
+        Votos brancos: ${opcao6} </br>
+        % nulo: ${((opcao5/total)*100).toFixed(2)} </br>
+        % brancos: ${((opcao6/total)*100).toFixed(2)} </br>
+    `
+    document.getElementById("mensagem").innerHTML =  mensagem
+}
+
+function calcularEx23(){
+    do {
+        total += 1
+        op=Number(prompt(`Entre com a opção:
+        1 - Novo salário 
+        2 - Férias  
+        3 - Décimo terceiro
+        4 - Sair
+        `))
+
+        switch(op){
+            case 1:
+                let sal=Number(prompt("Entre com o novo salário"))
+                if (sal<=250){
+
+                } else if (sal>250 && sal <=600){
+
+                } else if (sal>600){
+
+                }
+                break
+            case 2:
+                opcao2 += 1
+                break
+            case 3:
+                opcao3 += 1
+                break
+            case 4:
+                opcao4 += 1
+                breaki
+            default:
+                alert ('Opção indisponível')
+        }
+        console.log(op)
+    } while(op!=4);
+
+    mensagem = `
+        
+    `
+    document.getElementById("mensagem").innerHTML =  mensagem
+}
