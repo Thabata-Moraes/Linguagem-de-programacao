@@ -1,0 +1,45 @@
+body {
+    margin: auto;
+    width: 400px;
+    height: 400px;
+    text-align: center;
+    padding: 30px;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #faebd7;
+}
+
+h1 {
+    color: #ffa500;
+    text-align: center;
+}
+
+div {
+    margin: 20px;
+    padding: 5px;
+}
+
+#caixa {
+    background: #ffa500;
+    border-radius: 15px;
+}
+
+button {
+    padding: 5px;
+    margin-left: 15px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    background-color: #faebd7;
+    border-radius: 10px;
+    border: 2px solid #ffa500;
+    
+}
+
+button:hover {
+    background-color: bisque;
+    border: 2px solid #faebd7;
+    border-radius: 10px;
+}
+
+input {
+    margin-top: 5px;
+}
