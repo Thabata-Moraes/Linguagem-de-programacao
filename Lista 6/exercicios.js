@@ -104,7 +104,7 @@ function exe4(){
         alert(`Situação: ${situacao}`)
     }
     console.log(notas.length)
-    alert(`A média da turma é: ${somaNotasTodos/(notas.length + )}`)
+    alert(`A média da turma é: ${somaNotasTodos/(notas.length)}`)
     
 }
 
