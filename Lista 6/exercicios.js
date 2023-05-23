@@ -108,3 +108,126 @@ function exe4(){
     
 }
 
+function exe5Cadastra(mat, meses){
+    for(let i=0;i<12;i++){
+        mat[i] = [] // aloca espaço na memória para cada vetor da matriz
+        alert(`Informe as vendas do mês ${meses[i]}`)
+        for(let j=0;j<4;j++){
+            mat[i][j] = Number(prompt(`Valor vendido na semana ${j+1}`))
+        }
+    }
+}
+function exe5TotalMes(mat, meses){
+    let totalMes = []
+    let saida = ''
+    for(let i=0;i<12;i++){
+        totalMes[i] = 0
+        for(let j=0;j<4;j++){
+            totalMes[i] = totalMes[i] + mat[i][j]
+        }
+        saida = saida + `\n ${meses[i]} - ${totalMes[i]}`
+    }
+    alert(saida)
+}
+function exe5TotalSemana(mat){
+    let totalSemana = []
+    let saida = ''
+    for(let j=0;j<4;j++){
+        totalSemana[j] = 0
+        for(let i=0;i<12;i++){
+            totalSemana[j] = totalSemana[j] + mat[i][j]
+        }
+        saida = saida + `Semana ${i} vendeu ${totalSemana[i]}`
+    }
+    alert(saida)
+}
+function exe5Total(mat){
+    let total = 0
+    for(let i=0;i<12;i++){
+        for(let j=0;j<4;j++){
+            total += mat[i][j]
+        }
+    }
+    alert(`Total vendido ${total}`)
+}
+function exe5(){
+    const meses = ["janeiro", "fevereiro", "março", "abril", "maio", "junho", "julho", "agosto", "setembro", "outubro", "novembro", "dezembro"]
+    let mat = []
+    // passagem de parâmetro é por referência
+    // a função chamada, quando altera o parâmetro, afeta a variável da função que chamou
+    exe5Cadastra(mat, meses) 
+    exe5TotalMes(mat, meses)
+    exe5TotalSemana(mat)
+    exe5Total(mat)
+}
+
+function preencherMatriz(matriz, linhas, colunas){
+    for (let i=0; i<linhas; i++){
+        matriz[i] = []
+        for (let j=0; j<colunas; j++){
+            matriz[i][j] = parseInt(Math.random()*20)
+        }
+    }
+}
+
+function mostraMatriz(matriz){
+    let saida
+    for(let i=0; i<matriz.length; i++){
+        let saida = ''
+        for(let j=0; j<matriz[i].length; j++){
+            saida = saida + " " + matriz[i][j]
+        }
+        console.log(saida)
+    }
+    console.log('\n')
+}
+
+function somaLinhaColuna(M, N){
+    let o =[]
+    for (let i=0; i<M.length; i++){
+        o[i] = []
+        for (let j=0; j<M[i].length; j++){
+            o[i][j] = M[i][j] + N[j][i]
+        }
+    }
+    mostraMatriz(o)
+}
+
+function exe7(){
+    let M = []
+    let N =[]
+    preencherMatriz(M, 4, 6)
+    preencherMatriz(N, 6, 4)
+    mostraMatriz(M)
+    mostraMatriz(N)
+    somaLinhaColuna(M, N)
+}
+
+function diagonalPrincipal(matriz){
+    let soma =0
+    for(let i=0;i<matriz.length;i++){
+        for(let j=0;j<matriz[i].length;j++){
+            if (i == j){
+                soma += matriz[i][j]
+            }
+        }
+    }
+    console.log(`Soma da DP é ${soma}`)
+}
+
+function diagonalSecundaria(matriz){
+    let soma =0
+    for(let i=0;i<matriz.length;i++){
+        let aux = matriz[i].length - i - 1
+        console.log(`${i} x ${aux} `)
+        soma += matriz[i][aux]
+    }
+    console.log(`Soma da DS é ${soma}`)
+}
+function exe10(){
+    let matriz = []
+    preencheMatriz(matriz, 5, 5)
+    mostraMatriz(matriz)
+    diagonalPrincipal(matriz)
+    diagonalSecundaria(matriz)
+}
